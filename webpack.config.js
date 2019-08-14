@@ -15,11 +15,11 @@ module.exports = {
         port: 3000,
         disableHostCheck: true
       },
-    output: {
-        path: path.join(__dirname, './docs'),
+      output: {
+        path: path.join(__dirname, '/docs'),
         filename: 'js/bundle.min.js',
         chunkFilename: 'js/vendor.bundle.js',
-        publicPath: '/docs'
+        publicPath: '/'
     },
     optimization: {
         splitChunks: {
@@ -66,10 +66,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            path: path.resolve(__dirname, './docs'),
+            path: path.resolve(__dirname, '/docs'),
             filename: "css/index.css",
             chunkFilename: "css/vendor.css",
-            publicPath: '/docs'
+            publicPath: '/'
         }),
         //new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
